@@ -8,6 +8,7 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>")
 
 -- 终端按键修改
-keymap.set('t', '<C-t>', '<Cmd>close<CR>')
-keymap.set("n", "<c-t>", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end,
-  { desc = "Terminal (Root Dir)" })
+keymap.set("t", "<C-t>", "<Cmd>close<CR>")
+keymap.set("n", "<c-t>", function()
+  Snacks.terminal(nil, { cwd = LazyVim.root() })
+end, { desc = "Terminal (Root Dir)" })
