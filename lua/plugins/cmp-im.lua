@@ -1,13 +1,10 @@
 return {
-  -- 在您的 Neovim 配置文件中添加以下内容
-  -- 其他插件...
-
   -- 安装 cmp-im 插件
   {
     "yehuohan/cmp-im",
     dependencies = {
       "hrsh7th/nvim-cmp", -- 依赖 nvim-cmp 插件
-      "hitdp/cmp-im-flypy", -- 依赖 cmp-im-zh 插件
+      "hitdp/cmp-im-flypy", -- 依赖 cmp-im-flypy 插件
     },
     config = function()
       -- 在此处进行 cmp-im 的配置
@@ -36,6 +33,4 @@ return {
       })
     end,
   },
-
-  -- 其他插件...
 }
