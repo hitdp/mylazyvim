@@ -10,7 +10,7 @@ return {
       -- 在此处进行 cmp-im 的配置
       require("cmp_im").setup({
         -- 启用输入法
-        enable = true,
+        enable = false,
         -- 设置输入法表
         tables = require("cmp_im_flypy").tables({ "flypy" }),
       })
@@ -21,7 +21,10 @@ return {
       -- 设置 nvim-cmp 的补全源
       require("cmp").setup({
         sources = {
-          { name = "IM" }, -- 添加 IM 补全源
+          { name = "IM" },
+          { name = "nvim_lsp" },
+          { name = "buffer" },
+          { name = "path" },
           -- 其他补全源...
         },
         -- 设置按键映射
